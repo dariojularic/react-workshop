@@ -27,6 +27,7 @@ function Pizza() {
 }
 
 function Header() {
+
   return <h1>Fast React Pizza Co.</h1>
 }
 
@@ -42,6 +43,14 @@ function Menu() {
 }
 
 function Footer() {
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 22;
+  const isOpen = hour >= openHour && hour <= closeHour;
+  console.log(isOpen)
+
+  if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
+  else alert("Sorry, we are closed")
   // return React.createElement("footer", null, "We're currently open")
   return <footer>{new Date().toLocaleTimeString()}. We' are currently open</footer>
 }

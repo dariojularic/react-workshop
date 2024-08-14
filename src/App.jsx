@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { pizzaData } from "/public/data"
+import "./index.css"
 
 // kad napisem React.createElement() dobijem error React not defined. pojasnit
 // kad napisem ' u <footer> dobijem bude crveno ali nema errora - can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.eslintreact/no-unescaped-entities
@@ -9,9 +10,11 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Menu />
-      <Footer />
+      <div className="container">
+        <Header />
+        <Menu />
+        <Footer />
+      </div>
     </>
   )
 }
@@ -20,25 +23,29 @@ function Pizza() {
   return (
     <div>
       <img src="/public/pizzas/focaccia.jpg" alt="Pizza focaccia" />
-      <h2>{pizzaData[0].name}</h2>
+      <h3>{pizzaData[0].name}</h3>
       <p>{pizzaData[0].ingredients}</p>
     </div>
   )
 }
 
 function Header() {
-
-  return <h1>Fast React Pizza Co.</h1>
+  // const style = { color: "red", fontSize: "48px", textTransform: "uppercase"};
+  return (
+    <header className="header">
+      <h1>Fast React Pizza Co.</h1>
+    </header>
+  )
 }
 
 function Menu() {
   return (
-    <div>
+    <main className="menu">
       <h2>Our Menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />
-    </div>
+    </main>
   )
 }
 
@@ -52,7 +59,7 @@ function Footer() {
   if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
   else alert("Sorry, we are closed")
   // return React.createElement("footer", null, "We're currently open")
-  return <footer>{new Date().toLocaleTimeString()}. We' are currently open</footer>
+  return <footer className="footer">{new Date().toLocaleTimeString()}. We' are currently open</footer>
 }
 
 

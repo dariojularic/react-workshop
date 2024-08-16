@@ -23,8 +23,8 @@ function Pizza() {
   return (
     <div>
       <img src="/public/pizzas/focaccia.jpg" alt="Pizza focaccia" />
-      {/* <h3>{pizzaData[0].name}</h3>
-      <p>{pizzaData[0].ingredients}</p> */}
+      <h3>{pizzaData[0].name}</h3>
+      <p>{pizzaData[0].ingredients}</p>
     </div>
   )
 }

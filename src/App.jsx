@@ -33,7 +33,7 @@ function Header() {
   // const style = { color: "red", fontSize: "48px", textTransform: "uppercase"};
   return (
     <header className="header">
-      {/* <h1>Fast React Pizza Co.</h1> */}
+      <h1>Fast React Pizza Co.</h1>
     </header>
   )
 }
@@ -41,7 +41,7 @@ function Header() {
 function Menu() {
   return (
     <main className="menu">
-      <h2>Our Menu</h2>
+      {/* <h2>Our Menu</h2> */}
       <Pizza />
       <Pizza />
       <Pizza />

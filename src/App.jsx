@@ -41,7 +41,7 @@ function Header() {
 function Menu() {
   return (
     <main className="menu">
-      {/* <h2>Our Menu</h2> */}
+      <h2>Our Menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />

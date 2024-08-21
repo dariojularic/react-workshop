@@ -73,12 +73,12 @@ body {
 
 /* *************** */
 
-/* .menu {
+.menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
-} */
+}
 
 .menu h2 {
   display: inline-block;

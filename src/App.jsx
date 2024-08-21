@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react'
 import './App.css'
 import { pizzaData } from "/public/data"

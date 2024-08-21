@@ -19,12 +19,16 @@ function App() {
   )
 }
 
-function Pizza() {
+function Pizza(props) {
+  console.log(props)
   return (
-    <div>
-      <img src="/public/pizzas/focaccia.jpg" alt="Pizza focaccia" />
-      <h3>{pizzaData[0].name}</h3>
-      <p>{pizzaData[0].ingredients}</p>
+    <div className="pizza">
+      <img src={props.photoName} alt={props.photoName} />
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.ingredients}</p>
+        <span>{props.price}</span>
+      </div>
     </div>
   )
 }
@@ -42,9 +46,19 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Pizza
+        name="Pizza Spinaci"
+        ingredients="Tomato, mozarella, spinach and ricotta cheese"
+        photoName="public/pizzas/spinaci.jpg"
+        price={10}
+      />
+
+      <Pizza
+        name="Pizza Funghi"
+        ingredients="Tomato, mushrooms"
+        photoName="public/pizzas/funghi.jpg"
+        price={12}
+      />
     </main>
   )
 }
@@ -56,8 +70,8 @@ function Footer() {
   const isOpen = hour >= openHour && hour <= closeHour;
   console.log(isOpen)
 
-  if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
-  else alert("Sorry, we are closed")
+  // if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
+  // else alert("Sorry, we are closed")
   // return React.createElement("footer", null, "We're currently open")
   return <footer className="footer">{new Date().toLocaleTimeString()}. We are currently open</footer>
 }

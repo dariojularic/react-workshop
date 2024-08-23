@@ -24,11 +24,11 @@ function Pizza(props) {
   console.log(props)
   return (
     <div className="pizza">
-      <img src={props.photoName} alt={props.photoName} />
+      <img src={props.pizzaObj.photoName} alt={props.pizzaObj.photoName} />
       <div>
-        <h3>{props.name}</h3>
-        <p>{props.ingredients}</p>
-        <span>{props.price}</span>
+        <h3>{props.pizzaObj.name}</h3>
+        <p>{props.pizzaObj.ingredients}</p>
+        <span>{props.pizzaObj.price}</span>
       </div>
     </div>
   )
@@ -50,7 +50,7 @@ function Menu() {
 
       <div>
         {pizzaData.map(pizza => (
-          <Pizza name={pizza.name} photoName={pizza.photoName} />
+          <Pizza pizzaObj={pizza} />
         ))}
 
       </div>

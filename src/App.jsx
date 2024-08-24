@@ -88,6 +88,7 @@ function Menu() {
 
 function Footer() {
   const hour = new Date().getHours();
+  console.log(hour)
   const openHour = 12;
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
@@ -98,10 +99,10 @@ function Footer() {
   // return React.createElement("footer", null, "We're currently open")
 
 
-  if(!isOpen)
-    return (
-      <p>We are happy to welcome you between {openHour}:00 and {closeHour}:00.</p>
-    )
+  // if(!isOpen)
+  //   return (
+  //     <p>We are happy to welcome you between {openHour}:00 and {closeHour}:00.</p>
+  //   )
 
 
   return (

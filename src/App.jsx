@@ -6,7 +6,7 @@ import "./index.css"
 
 // kad napisem React.createElement() dobijem error React not defined. pojasnit
 // kad napisem ' u <footer> dobijem bude crveno ali nema errora - can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.eslintreact/no-unescaped-entities
-// zasto ne mozemo koristit if else? zasto ternary operator daje neki value, a if else ne? 
+// zasto ne mozemo koristit if else? zasto ternary operator daje neki value, a if else ne?
 
 function App() {
 
@@ -95,13 +95,15 @@ function Footer() {
   // return React.createElement("footer", null, "We're currently open")
   return (
     <footer className="footer">
-      {isOpen && (
+      {isOpen ? (
         <div className="order">
           <p>
             We are open until {closeHour}:00. Come visit us or order online.
           </p>
           <button className="btn">Order</button>
         </div>
+      ) : (
+        <p>We are happy to welcome you between {openHour}:00 and {closeHour}:00.</p>
       )}
       {/* {new Date().toLocaleTimeString()}. We are currently open */}
     </footer>

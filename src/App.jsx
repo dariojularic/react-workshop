@@ -23,6 +23,9 @@ function App() {
 
 function Pizza(props) {
   console.log(props)
+
+  if (props.pizzaObj.soldOut) return null;
+
   return (
     <li className="pizza">
       <img src={props.pizzaObj.photoName} alt={props.pizzaObj.photoName} />
@@ -93,6 +96,14 @@ function Footer() {
   // if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
   // else alert("Sorry, we are closed")
   // return React.createElement("footer", null, "We're currently open")
+
+
+  if(!isOpen)
+    return (
+      <p>We are happy to welcome you between {openHour}:00 and {closeHour}:00.</p>
+    )
+
+
   return (
     <footer className="footer">
       {isOpen ? (

@@ -6,6 +6,7 @@ import "./index.css"
 
 // kad napisem React.createElement() dobijem error React not defined. pojasnit
 // kad napisem ' u <footer> dobijem bude crveno ali nema errora - can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.eslintreact/no-unescaped-entities
+// zasto ne mozemo koristit if else? zasto ternary operator daje neki value, a if else ne? 
 
 function App() {
 
@@ -58,7 +59,9 @@ function Menu() {
             <Pizza pizzaObj={pizza} key={pizza.name} />
           ))}
         </ul>
-      ) : null}
+      ) : (
+        <p>We are still working on our menu. Please come back later</p>
+      )}
 
 
 

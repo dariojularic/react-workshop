@@ -32,11 +32,11 @@ function Pizza({pizzaObj}) {
         <h3>{pizzaObj.name}</h3>
         <p>{pizzaObj.ingredients}</p>
 
-        {pizzaObj.soldOut ? (
+        {/* {pizzaObj.soldOut ? (
           <span>SOLD OUT</span>
         ) : (
           <span>{pizzaObj.price}</span>
-        )}
+        )} */}
 
         <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
       </div>

@@ -9,7 +9,6 @@ import "./index.css"
 // zasto ne mozemo koristit if else? zasto ternary operator daje neki value, a if else ne?
 
 function App() {
-
   return (
     <>
       <div className="container">
@@ -24,7 +23,7 @@ function App() {
 function Pizza({pizzaObj}) {
   console.log(pizzaObj)
 
-  if (pizzaObj.soldOut) return null;
+  // if (pizzaObj.soldOut) return null;
 
   return (
     <li className="pizza">

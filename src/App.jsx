@@ -3,6 +3,8 @@ import { useState } from 'react'
 import './App.css'
 import { pizzaData } from "/public/data"
 import "./index.css"
+import Header from './Header'
+
 
 // kad napisem React.createElement() dobijem error React not defined. pojasnit
 // kad napisem ' u <footer> dobijem bude crveno ali nema errora - can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.eslintreact/no-unescaped-entities
@@ -44,14 +46,7 @@ function Pizza({pizzaObj}) {
   )
 }
 
-function Header() {
-  // const style = { color: "red", fontSize: "48px", textTransform: "uppercase"};
-  return (
-    <header className="header">
-      <h1>Fast React Pizza Co.</h1>
-    </header>
-  )
-}
+
 
 function Menu() {
   const pizzas = pizzaData;

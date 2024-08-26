@@ -1,13 +1,22 @@
 import React from "react"
 
 const Counter = () => {
-  const count = 0;
+  const [count, setCount] = React.useState(0);
+
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+
+  const handleDecrement = () => {
+    setCount(count - 1);
+  };
+
 
   return (
     <React.Fragment>
       <p>The count is: {count} </p>
-      <button>Increment</button>
-      <button>Decrement</button>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleDecrement}>Decrement</button>
     </React.Fragment>
   )
 }

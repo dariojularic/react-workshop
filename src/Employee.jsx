@@ -1,8 +1,9 @@
 import React from "react";
 
-const Employee = () => {
+const Employee = (props) => {
+  console.log(props)
   return (
-    <h1>This is an employee</h1>
+    <h1>Employee Name: {props.firstName}</h1>
   )
 }
 

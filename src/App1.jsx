@@ -1,17 +1,15 @@
 import React from "react";
+import Counter from "./Counter";
 import "./App.css";
-import Employee from "./Employee";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Company Directory</h1>
-        <Employee/>
-        <Employee/>
-        <Employee/>
-        <Employee/>
+        <h2> Welcome to my counter :) </h2>
+        <Counter />
       </header>
+
     </div>
   )
 }

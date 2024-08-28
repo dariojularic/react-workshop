@@ -6,22 +6,26 @@ const employeeInfo = [
   {
     firstName: "Jack",
     lastName: "Smith",
-    age: "23"
+    age: "23",
+    employeeId: 1
   },
   {
     firstName: "Jonny",
     lastName: "F",
-    age: "22"
+    age: "22",
+    employeeId: 2
   },
   {
     firstName: "Mick",
     lastName: "A",
-    age: "32"
+    age: "32",
+    employeeId: 3
   },
   {
     firstName: "Top",
     lastName: "G",
-    age: "45"
+    age: "45",
+    employeeId: 4
   }
 ];
 
@@ -34,7 +38,7 @@ function App() {
         {employeeInfo.map(employee => {
           // const {firstName, lastName, age} = employee;
           return (
-            <Employee {...employee} />
+            <Employee key={employee.employeeId} {...employee} />
           )
         })}
 

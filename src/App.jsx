@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Company Directory</h1>
+        {/* <h1>Company Directory</h1> */}
         {employeeInfo.map(employee => {
           // const {firstName, lastName, age} = employee;
           return (

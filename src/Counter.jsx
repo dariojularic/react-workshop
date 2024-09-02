@@ -15,6 +15,14 @@ const Counter = () => {
     console.log("The use effect ran")
   }, [count, count2])
 
+  // componentDWillUnmount
+  useEffect(() => {
+    console.log(`The count has updated to ${count}`);
+    return () => {
+      console.log(`we are in the cleanup - the count is ${count}`)
+    }
+  }, [count]);
+
   return (
     <div>
       <h6> Counter</h6>

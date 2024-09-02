@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Counter from "./Counter";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h2> Welcome to my counter :) </h2>
-        <Counter />
-      </header>
-
-    </div>
-  )
+ const [showCounter, setShowCounter] = useState(false);
+ return (
+  <div className="App">
+    <h1>Our App</h1>
+    <button onClick={() => setShowCounter(!showCounter)}>
+      {showCounter ? "Hide Counter" : "Show Counter"}
+    </button>
+    {showCounter && <Counter />}
+  </div>
+ )
 }
 
 export default App;
